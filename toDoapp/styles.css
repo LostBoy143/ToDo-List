@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(175, 193, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background-color: rgb(165, 202, 239);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(1, 26, 26);
+  padding: 15px;
+}
+#icon {
+  width: 35px;
+  background-size: cover;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(101, 8, 93);
+}
+.input-field {
+  min-height: 2.5rem;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+#task-input,
+#submit {
+  padding: 2px 8px 2px 8px;
+  height: 2.5rem;
+  border-radius: 20px;
+  outline: none;
+  border-color: transparent;
+  box-shadow: 2px 2px 5px rgb(1, 26, 26);
+}
+#submit {
+  width: 80px;
+  cursor: pointer;
+}
+#task-input {
+  width: 70%;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+}
+ul li::before {
+  content: " ";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("images/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 7px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url("images/checked.png");
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #ccd4e2;
+}
+
+@media (max-width: 480px) {
+  #task-input {
+    width: 100%;
+  }
+  ul li {
+    font-size: 16px;
+  }
+  .input-field {
+    gap: 10px;
+  }
+  #submit {
+    font-weight: 500;
+  }
+}
